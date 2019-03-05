@@ -1,12 +1,17 @@
 def prime? (num)
   limit = Math.sqrt(num.abs)
-  divisors = (2..limit).to_a
-  divisors.each do |div|
+  divisors = 0
+  pot_divisors = (1..limit).to_a
+  pot_divisors.each do |div|
     remainder = num % div
     if remainder == 0
-      return false
+      divisors += 1
     end
   end
-  return true
+  if divisors == 2
+    return true
+  else 
+    return false
+  end
 
 end
