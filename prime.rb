@@ -10,7 +10,7 @@ def prime? (num)
   end
   if divisors == 2
     return true
-  else 
+  else
     return false
   end
 
